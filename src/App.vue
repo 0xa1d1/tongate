@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="openModal" id="connect">Launch a TON Jetton</button>
+    <button @click="openModal" id="connect">Connect Wallet</button>
   </div>
 </template>
 
@@ -9,7 +9,6 @@ import WebApp from '@twa-dev/sdk';
 import {TonConnectUI} from '@tonconnect/ui';
 
 const tonConnectUI = new TonConnectUI({
-  buttonRootId: 'connect',
   manifestUrl: 'https://0xa1d1.github.io/tongate/tonconnect-manifest.json'
 });
 
