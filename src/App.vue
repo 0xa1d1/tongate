@@ -24,7 +24,8 @@ const address = ref("");
 
 const updateAddress = (info) => {
   if (info?.account?.address) {
-    address.value = toUserFriendlyAddress(info.account.address)
+    const addr = toUserFriendlyAddress(info.account.address);
+    address.value = addr.substring(0, 4) + "..." + addr.substring(addr.length - 4, addr.length);
   } else {
     address.value = "";
   }
